@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap" style="box-sizing: border-box">
+        <div class="content">border-box</div>
+    </div>
+    
+    <div class="wrap" style="box-sizing: content-box">
+        <div class="content">content-box</div>
+    </div>
+
+    <div>
+        盒模型有三个4个部分，从外往内，分别是margin、border、padding、content
+        在设置了宽高的情况下：
+        1、如果是border-box，宽高值则包含了border、padding，这两个宽度的增加会压缩content区域
+        2、如果是content-box，宽高仅包含了content，border和padding的增加会把盒模型的大小撑大
+        一般使用较多的是border-box，确保padding和border的设置不会影响页面布局
+    </div>
+</body>
+<style>
+.wrap {
+    padding: 30px;
+    border: 10px solid red;
+    width: 400px;
+    height: 400px;
+}
+.content {
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    position: absolute;
+}
+</style>
+</html>
